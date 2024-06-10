@@ -1,4 +1,215 @@
-            日向翔陽為本作的主角，性格單純、率直，身高雖矮小但運動神經發達，小時候在電視看到烏野高中的排球比賽，被一然身高矮小卻擁有超強實力的「小巨人」球員所吸引，自此便就努力想成為和小巨人一樣厲害的選手。在國中唯一一場比賽中，對上強豪北川第一中學的影山飛雄而慘敗，日向誓言要打敗影山，卻和影山就讀了同一所「烏野高中」。影山飛雄雖擁有極佳的球感與技術，但因不善於溝通，國中時其他成員都不願意配合他的舉球，被諷為「球場上的王者」（意指行事獨裁），但運用精準的舉球能力完美配合了日向的爆發式跳躍，發展出「怪人速攻」之超強絕招 ，成為最佳搭檔同時也是對方的最棒的對手。
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排球少年</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 共通樣式 */
+        body {
+            background-color: rgba(0, 0, 0, 0.682);
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            color: rgb(255, 249, 240);
+            font-weight: bolder;
+            font-style: italic;
+        }
+
+        .ar1 {
+            background-color: #fdaa04bd;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .a, .c {
+            border: 1px solid black;
+            padding: 8px;
+            background-color: #fffdfdbd;
+            font-size: 20px;
+            font-weight: 800;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .a img, .c img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container img {
+            margin: 0 10px;
+        }
+
+        /* 手機樣式 */
+        [class*="col-"] {
+            width: 100%;
+        }
+
+        /* 平板樣式 */
+        @media only screen and (min-width: 600px) {
+            .col-s-1 { width: 8.33%; }
+            .col-s-2 { width: 16.66%; }
+            .col-s-3 { width: 25%; }
+            .col-s-4 { width: 33.33%; }
+            .col-s-5 { width: 41.66%; }
+            .col-s-6 { width: 50%; }
+            .col-s-7 { width: 58.33%; }
+            .col-s-8 { width: 66.66%; }
+            .col-s-9 { width: 75%; }
+            .col-s-10 { width: 83.33%; }
+            .col-s-11 { width: 91.66%; }
+            .col-s-12 { width: 100%; }
+        }
+
+        /* 電腦樣式 */
+        @media only screen and (min-width: 768px) {
+            body {
+                background-image: url('img_flowers.jpg');
+                background-size: cover;
+            }
+
+            .col-1 { width: 8.33%; }
+            .col-2 { width: 16.66%; }
+            .col-3 { width: 25%; }
+            .col-4 { width: 33.33%; }
+            .col-5 { width: 41.66%; }
+            .col-6 { width: 50%; }
+            .col-7 { width: 58.33%; }
+            .col-8 { width: 66.66%; }
+            .col-9 { width: 75%; }
+            .col-10 { width: 83.33%; }
+            .col-11 { width: 91.66%; }
+            .col-12 { width: 100%; }
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        .side-menu {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .side-menu a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .side-menu a:hover {
+            background-color: #575757;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+        }
+
+        .open-btn {
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            background-color: #111;
+            padding: 10px 15px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .bc {
+            width: 100%;
+            height: auto;
+            background-image: url('7186877.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: bolder;
+        }
+    </style>
+    <script>
+        function openMenu() {
+            document.getElementById("menu").style.width = "250px";
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function closeMenu() {
+            document.getElementById("menu").style.width = "0";
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="image-container">
+            <img src="7186877.jpg" class="bc">
+        </div>
+    </header>
+    
+    <div id="overlay" class="overlay" onclick="closeMenu()"></div>
+    <div id="menu" class="side-menu">
+        <a href="#" class="close-btn" onclick="closeMenu()">&times;</a>
+        <a href="index.html">首頁</a>
+        <a href="#">◆喜歡的角色</a>
+        <a href="a.html">　　及川徹</a>
+        <a href="b.html">　　北信介</a>
+        <a href="c.html">　　月島螢</a>
+    </div>
+    <span class="open-btn" onclick="openMenu()">&#9776;</span>
+    
+    <div class="ar1">
+        <h1>主角介紹</h1>
+        <hr>
+        <div class="container">
+            <img src="sma.jpg" width="5%" height="5%">
+            <h2>日向翔陽</h2>
+            <img src="sma.jpg" width="5%" height="5%">
+        </div>
+        <div class="a col-12 col-s-12">
+            <img src="hhh.jpg" width="20%" height="20%">
+            <p>日向翔陽為本作的主角，性格單純、率直，身高雖矮小但運動神經發達，小時候在電視看到烏野高中的排球比賽，被一然身高矮小卻擁有超強實力的「小巨人」球員所吸引，自此便就努力想成為和小巨人一樣厲害的選手。在國中唯一一場比賽中，對上強豪北川第一中學的影山飛雄而慘敗，日向誓言要打敗影山，卻和影山就讀了同一所「烏野高中」。影山飛雄雖擁有極佳的球感與技術，但因不善於溝通，國中時其他成員都不願意配合他的舉球，被諷為「球場上的王者」（意指行事獨裁），但運用精準的舉球能力完美配合了日向的爆發式跳躍，發展出「怪人速攻」之超強絕招 ，成為最佳搭檔同時也是對方的最棒的對手。</p>
             <p>影山飛雄烏野高校排球部的二傳手。雖然嘴巴說出來的話總是不中聽，不過本人其實並不帶惡意，擁有超群的球感、控球能力、敏銳的判斷力和出色的身體能力，能夠傳出精準度極高的托球，在準度方面本作中無人能出其右。即使是天才，也不吝惜努力，經常從他校的舉球員身上學習值得效法的技術。與音駒的練習比賽後也想向孤爪討教眼神假動作的技術，但因為態度看起來咄咄逼人所以嚇跑人家了。自尊心很高，但在其之上更強烈的是對勝利的渴望。不容易緊張，反而遇見強大對手時會有高機率進入日向所謂「平心靜氣影山」的狀態，全身的感官都如同雷達般敏銳，球感也達到最佳狀態，冷靜到有種暴風雨前寧靜的威嚇感。</p>
         </div>
 
