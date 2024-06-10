@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>狐狸們的老大-北信介</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        /*手機*/
+        [class*="col-"] {
+            
+            width: 100%;
+        }
+        @media only screen and (min-width: 600px) {
+            /*筆電*/
+            .col-s-1 {width: 8.33%;}
+            .col-s-2 {width: 16.66%;}
+            .col-s-3 {width: 25%;}
+            .col-s-4 {width: 33.33%;}
+            .col-s-5 {width: 41.66%;}
+            .col-s-6 {width: 50%;}
+            .col-s-7 {width: 58.33%;}
+            .col-s-8 {width: 66.66%;}
+            .col-s-9 {width: 75%;}
+            .col-s-10 {width: 83.33%;}
+            .col-s-11 {width: 91.66%;}
+            .col-s-12 {width: 100%;}
+        }
+        @media only screen and (min-width: 768px) {
+            body {
+                background-image: url('img_flowers.jpg');
+                height: auto;
+              }
+            /*電腦*/
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none; 
+        }
+        .side-menu {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .side-menu a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+        .side-menu a:hover {
+            background-color: #575757;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+        }
+        .open-btn {
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            background-color: #111;
+            padding: 10px 15px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .bc {
+            width: 100%;
+            height: auto;
+            background-image: url(lll.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        body{
+            background-color: black;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        .ar1{
+            background-color: #ffffffbd;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .a{
+            border: 1px solid black;
+            padding: 8px;
+            width: 100%;
+            background-color: #000000bb; /* 背景顏色 */
+            font-size: 20px;
+            font-weight: 800;
+            height: auto;
+            overflow: hidden;
+            color: white;
+        }
+        .b{
+            text-align: center;
+            font-size: xx-large;
+            color: rgb(0, 0, 0);
+            font-weight: bolder;
+            font-style: italic;
+        
+        }
+        .c{
+            color: black;
+            font-size: x-large;
+            text-align: center;
+            font-weight: bolder;
+        }
+        .d{
+            font-size: x-large;
+            font-weight: bolder;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function openMenu() {
+                document.getElementById("menu").style.width = "250px";
+                document.getElementById("overlay").style.display = "block";
+        }
+        function closeMenu() {
+                document.getElementById("menu").style.width = "0";
+                document.getElementById("overlay").style.display = "none";
+        }
+        </script>
+</head>
+<body>
+    <header>
+        <img src="lll.jpg" class="bc">
+    </header>
+    <div id="overlay" class="overlay" onclick="closeMenu()"></div>
+<div id="menu" class="side-menu">
+    <a href="#" class="close-btn" onclick="closeMenu()">&times;</a>
+    <a href="B11256025.html">首頁</a>
+    <a href=#>◆喜歡的角色</a>
+    <a href="a.html">及川徹</a>
+    <a href="b.html">北信介</a>
+    <a href="c.html">月島螢</a>
+</div>
+<span class="open-btn" onclick="openMenu()">&#9776;</span>
+<div class="ar1">
+<h1 class="b" style="color:coral;">我心裡第二名喜歡的角色</h1>
+<h2 class="c">★北信 介★</h2>
+</div>
+<div class="a">
+    <h1 class="d" style="color: sandybrown;">角色經歷</h1>
+    <hr>
+　　北信介這個角色，是個完美的人。
+
+北信介還是小孩的時候，奶奶曾經教導他：「神明就在我們身邊，隨時有人看著你唷！」北信介從小就培養出極高的紀律，並且對於所有項目一視同仁，不論是清潔、學業、排球...。
+漸漸的，對北而言，因神而在的信仰，轉變為對自己負責的信條。
+北是一個很無私且早熟的小孩，不只做好自己分內的事情，更會盡全力協助隊友。漫畫中，北信介有一雙如貓的雙眸；劇情中，北信介的觀察力過人，隊友的性格、對手的技術，都被他聊若指掌。
+北信介這麼做是為了誰？為了隊伍，北信介從沒有想過這樣做，能為自己帶來什麼好處，他只是單純的為隊伍做出貢獻，既然沒辦法上場，那就努力做好情蒐的工作。
+然而，如同北透徹的觀察身邊的人事物，一雙溫柔的慧眼也看上了北。在教練黑須法宗的力邀之下，北信介加入稻荷崎排球隊。
+<p></p>
+　　北信介如同以往，富有紀律的過生活，清潔、讀書、排球，每天的每件小事都是他的儀式，只有盡力完成才能無愧己心。
+同時北信介也把一切看的通透，他客觀的知道自己的實力在哪裡，他也知道自己跟身邊那些如星辰般耀眼的同儕相比，自己的技術宛若一顆平凡的石頭。
+有句話是這麼說的：如果愛是最強的魔法，那麼平常心就是第二強的魔法。北信介把這句話發揮的淋漓盡致，對於排球的愛與平常心，也註定會讓這顆石子，在某一刻耀眼的劃破天空。
+北信介是個理性的人，他知道溫柔委婉，對二年級以宮兄弟為首的那群頑童，起不了什麼作用，所以北訓斥二年級的時候，總是一針見血。
+北信介也是個體貼的人，他知道宮侑不會安分休息，索性直接把食物擺在他面前，並用字條提醒他：好好吃飯、吃完去睡。
+但是，北信介也是人。
+<p></p>
+　　在北內心最深的一處，一定會存在著另一種聲音：如果結果只是一切，會不會自己這六年的努力過程只是徒勞與枉然？
+些許雜念在北寧靜如水的心中，漾起了漣漪，然而當北接到生涯六年，唯一一件隊服的時候，陣陣漣漪掀起滾滾波濤，並化作汩汩淚水。
+我想，此刻北信介腦中，一定是這句話吧。
+<h4 style="color: rgb(255, 238, 0);">「神明就在我們身邊，隨時有人看著你唷！」</h4>
+</div>
+<div class="a">
+    <h1 class="d" style="color:sandybrown;">角色名言</h1>
+    <hr>
+    <h2 class="c" style="color: rgb(255, 238, 0);">「我不需要喝采，我只要穩紮穩打」</h2>
+    <p></p>
+　　從國中三年到高中三年，這才是第一次穿上球衣上場比賽，在此之前都沒有上場的機會，在國中甚至連球衣都拿不到，此時才是北的第一次發揮，不禁佩服這樣的意志，一般人若沒有得到及時的成果與報酬恐怕早就放棄了，然而北卻能維持一貫的練習，不為了什麼，正是堅持，只不過是平常的習慣。
+就算是小人物也不斷默默努力，做好本分，不求名聲，沒有過人的身體素質與技術，但冷靜把每個細節都做到最好，可以說是內心極為平靜，不會被情感所左右的人吧，此乃最強的心理素質。也真虧教練看中北這樣的人，實在是伯樂識馬。
+<p></p>
+<h2 class="c" style="color: rgb(255, 238, 0);">「我不懂緊張有什麼意義，因為你們想發揮超越平常的力量，才會緊張吧，畢竟吃喝拉撒這種每天都要做的事情，沒有人會感到緊張，排球也是一樣，既然平時訓練能做到，那就沒什麼好緊張了吧。每一天都要腳踏實地、穩紮穩打，健康管理、打掃、整理、寒暄、排球，反覆、堅持、細心，這些都讓我覺得非常舒適，過程比結果更重要，就算大人這麼說，小孩子肯定聽不進去，不過我贊成大人們的觀點，正因為每天那些行動，才有了今天的我，結果不過是副產物罷了。」</h2>
+<img src="uuu.jpg" width="100%">
+<img src="vvv.jpg" width="100%">
+</div>
+<div class="a">
+    <h1 class="d" style="color:coral;">個人感想</h1>
+    <hr>
+    　　我認為這樣的態度值得好好學習，在各領域都一樣，面對什麼情況都不用太緊張，照平常做自己，就是所謂保持「平常心」，發揮處自己應該有的實力就夠了；以不變應萬變，以不變的心，面對萬變的情況。
+    比賽、考試很多都是一樣的，平常準備充足，準備萬全，便沒什麼好擔心，正因為人們都想要發揮出比平常更強的實力，才會感到緊張，然而這些緊張是沒必要的，正常發揮，得到自己應該有的分數與評價、並且接納它，或許就很好了吧。
+    <p></p>
+    　　與其忌妒才能，倒不如自己也開始努力追上去才對。
+
+然而就算自己已經十分認真了，也還是追不上呢？那就接受這一切吧。正如北說的那句話：<h2 class="c" style="color: rgb(255, 238, 0);">「我這個普通人能參與這場怪物們的盛宴，真是太幸運了。」</h2>
+
+正是因為努力過，更能知道那樣的怪物們有多厲害，才更有感觸。好好發揮自己的實力，不要愧對自己，這一切都會成為你的一部分的。同樣是參與怪物盛宴的普通人，我很認同喔。
+
+說是這麼說，但做到很困難，以我個人來說，我自認還是偏向感性那一邊的，知道是一回事，能否實踐是一回事，總之，還是共勉之吧。腳踏實地、穩紮穩打，過好充實的每一天吧！
+<p></p>
+　　最後北隊畢業後選擇去種田，也很符合北隊的個性的工作。
+</div>
+</body>
+</html>
